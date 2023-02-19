@@ -19,4 +19,14 @@ Hardware Currently Being Used
   HPTuners MPVI2
   ECU Simulator - https://www.tindie.com/products/kevinliang/obd-ii-ecu-simulator-2/
 
+OBD2 Wiki - https://en.wikipedia.org/wiki/OBD-II_PIDs
+
+
+
+
+
+
+
+
+
 Thanks for everything and taking the time to look at this
