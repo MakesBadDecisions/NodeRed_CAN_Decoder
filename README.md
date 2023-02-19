@@ -1,12 +1,9 @@
-  I am at a point where I need just a little push in the right direction from the community. What I have created is a flow to decode, request and interpret CAN communications from a vehicle. The goal here is to create a simple set of gauges with a user definable warning for each of those gauges. That warning would then trigger a GPIO to activate a warning light or relay to control a fan. That is for the end. Right now I have accomplished more than I could imagine. I am by no means a CS person, I am a mechanic with an idea. I am working on loading my flow so that those that are much smarter than I can chime in. All criticisms are welcomed and the more help I can generate here the better the end project will be to share with all. I am using a raspi4 and a usb CAN device. Everything comms wise works.
+I know things like this have been created not only in the open source world but also in the retail world. Problem with those is none of them do what I need. I need a simple embedded device to send and recieve CAN messages to then control various outputs. Ideally a simple APP or website to control and veiw these things and allow for simple controls. This project has come from a need based on swapping new drivetrains in older vehicles. These new GM engine and trans mission controllers do not output fan controls, PRNDL conrols nor do they easily produce signals for gauges. In performaning numerous swaps I have been almost forced to use far more prodcuts than I believe neccesarry to accomplish simple controls of simple analog systems. Plus, I have expaned my knowledge base further than I have ever thought.
 
-  What i need help with is a way to get my gauges working. I started with UI builder as the examples I found could easily be tweaked for what I needed. I quickly got stuck on why it wont receive the data i am sending it. I am sure its something simple.
 
-  The next thing is converting some of the strings into tangible data has proven difficult. I have managed most of the easy ones, the rest needs someone to unlock the hidden gem for me.
+There are many things to get done on this readme and I will get it done. 
 
-There are many things to get done on this readme and I will get it done. I just a hand from someone with more knowledge than I. 
-
-You will need in you pallette:
+You will need in your pallette:
 
     node-red-contrib-socketcan
   
@@ -16,13 +13,11 @@ You will need in you pallette:
   
     and all other raspi related nodes.
 
-
-
 Hardware Currently Being Used :
   
     USB2CAN from Inno-Maker - https://www.inno-maker.com/product/usb-can/
   
-    Raspi4
+    Raspi4 - new install from latest Raspi release then fully updated and upgraded. CAN-utils installed, NodeJS updated, Node-Red updated
   
     GM E38 Bench Test unit
   
@@ -30,11 +25,23 @@ Hardware Currently Being Used :
   
     ECU Simulator - https://www.tindie.com/products/kevinliang/obd-ii-ecu-simulator-2/
 
-
-
 OBD2 Wiki - https://en.wikipedia.org/wiki/OBD-II_PIDs
 
-
+List Of things on to-do list - not in any specific order :
+    
+    - Gauges - Updating and functioning
+    
+    - Define and Decode more PIDs 
+    
+    - Request, Read and Clear Codes from Ui
+    
+    - Request and Read Vehicle Information from Ui
+    
+    - User Definable warning from UI to trigger internally defined GPIO and resultant output function - ie shift light, fan relay trigger based on temps, etc.
+    
+    - CAN request "gate-keeper" of sorts - This is to make sure that no CAN requests are sent at same time. This feature will be needed before real world use.
+    
+    - A freaking sweet and beutiful UI with gauges, user definable controls and functions - I have no idea how to do any of this so please if you are interested in this project please help as much as you can.
 
 
 
