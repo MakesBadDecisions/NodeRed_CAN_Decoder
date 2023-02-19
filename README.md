@@ -7,15 +7,16 @@ The next thing is converting some of the strings into tangible data has proven d
 There are many things to get done on this readme and I will get it done. I just a hand from someone with more knowledge than I. 
 
 You will need in you pallette:
-node-red-contrib-socketcan
-node-red-contrib-uibuilder
-node-red-contrib-xterm
-and all other raspi related nodes.
+  node-red-contrib-socketcan
+  node-red-contrib-uibuilder
+  node-red-contrib-xterm
+  and all other raspi related nodes.
 
 Hardware Currently Being Used 
-USB2CAN from Amazon
-Raspi4
-GM E38 Bench Test unit
-ECU Simulator bought with prepaid card to some shady ass internet site - does work as advertised and has proven to be very valuable tool. 
+  USB2CAN from Inno-Maker - https://www.inno-maker.com/product/usb-can/
+  Raspi4
+  GM E38 Bench Test unit
+  HPTuners MPVI2
+  ECU Simulator - https://www.tindie.com/products/kevinliang/obd-ii-ecu-simulator-2/
 
 Thanks for everything and taking the time to look at this
