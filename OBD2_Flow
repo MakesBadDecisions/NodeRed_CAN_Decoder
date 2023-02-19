@@ -823,7 +823,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "1",
+        "repeat": "0.25",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -5771,7 +5771,7 @@
         "type": "function",
         "z": "7bc669dfcec94128",
         "name": "Engine RPM",
-        "func": "var newMsg = { payload: (msg.payload.data[3]*\"256\"+msg.payload.data[4])/\"4\"};\nreturn newMsg;",
+        "func": "// @ts-nocheck\nvar newMsg = { payload: (msg.payload.data[3]*\"256\"+msg.payload.data[4])/\"4\"};\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5781,8 +5781,7 @@
         "y": 700,
         "wires": [
             [
-                "d8c764908b8a4d3c",
-                "2ff0e2ee01f837b4"
+                "d8c764908b8a4d3c"
             ]
         ],
         "info": "Engine RPM\nHEX-0c \nDEC-12\t\nLength in Bytes - 2\t\nLow- 0\t\nHigh- 16,383.75\t\t\nUnit - RPM\nFormula- (((256*A)+B)/\"4\")"
@@ -7555,11 +7554,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 510,
         "y": 700,
         "wires": [
             [
-                "db93ba6deb268bd3"
+                "db93ba6deb268bd3",
+                "2ff0e2ee01f837b4"
             ]
         ]
     },
@@ -8245,8 +8245,8 @@
         "links": [
             "4bc0ddf986685c3d"
         ],
-        "x": 815,
-        "y": 700,
+        "x": 875,
+        "y": 680,
         "wires": []
     },
     {
@@ -10617,15 +10617,16 @@
         "id": "6af7d38b203410b2",
         "type": "debug",
         "z": "ddcbb8adbd5b0489",
-        "name": "debug 1",
+        "name": "data from front end",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
+        "x": 810,
         "y": 40,
         "wires": []
     },
@@ -10634,7 +10635,7 @@
         "type": "uibuilder",
         "z": "ddcbb8adbd5b0489",
         "name": "OBD Gauges",
-        "topic": "",
+        "topic": "RPM",
         "url": "Gauges",
         "fwdInMessages": false,
         "allowScripts": false,
@@ -10662,15 +10663,16 @@
         "id": "574134b0d7cd6ce3",
         "type": "debug",
         "z": "ddcbb8adbd5b0489",
-        "name": "debug 2",
+        "name": "control msg from front end",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
+        "x": 830,
         "y": 80,
         "wires": []
     },
@@ -10678,15 +10680,16 @@
         "id": "1857dd896602f9ec",
         "type": "debug",
         "z": "ddcbb8adbd5b0489",
-        "name": "debug 3",
+        "name": "From RPM",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 180,
+        "x": 210,
         "y": 140,
         "wires": []
     }
